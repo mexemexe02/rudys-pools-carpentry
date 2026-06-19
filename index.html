@@ -1,0 +1,2821 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ============================================================ -->
+    <!-- Rudy's Pools & Carpentry Shop — Professional Demo Website     -->
+    <!-- Barrie, ON | 416-706-4899                                    -->
+    <!-- Design System: Coinbase-inspired clean professional aesthetic -->
+    <!-- ============================================================ -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rudy's Pools & Carpentry Shop — Expert pool installation, repair, deck building, custom fencing, outdoor kitchens & carpentry services in Barrie, Ontario. Call 416-706-4899.">
+    <meta name="keywords" content="pool installation Barrie, pool repair, deck building, custom fencing, outdoor kitchens, carpentry Barrie, Rudy's Pools">
+    <meta name="author" content="Rudy's Pools & Carpentry Shop">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0052ff">
+    <meta property="og:title" content="Rudy's Pools & Carpentry Shop — Barrie, ON">
+    <meta property="og:description" content="Professional pool installation and custom carpentry services in Barrie, Ontario. Trusted craftsmanship since day one.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_CA">
+    <title>Rudy's Pools & Carpentry Shop — Pool Installation, Repair & Custom Carpentry | Barrie, ON</title>
+
+    <!-- ============================== -->
+    <!-- Google Fonts: DM Sans + Inter  -->
+    <!-- ============================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <!-- ============================== -->
+    <!-- Font Awesome 6 (icons only)    -->
+    <!-- ============================== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <style>
+        /* ================================================================ */
+        /*  CSS RESET & BASE STYLES                                         */
+        /*  Coinbase-inspired: slate backgrounds, trust-blue accents        */
+        /* ================================================================ */
+
+        /* --- Box-sizing reset --- */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* --- Remove default list styles --- */
+        ul,
+        ol {
+            list-style: none;
+        }
+
+        /* --- Remove default link styles --- */
+        a {
+            text-decoration: none;
+            color: inherit;
+            cursor: pointer;
+        }
+
+        /* --- Responsive images --- */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* --- Button reset --- */
+        button {
+            cursor: pointer;
+            border: none;
+            background: none;
+            font-family: inherit;
+            font-size: inherit;
+        }
+
+        /* --- Form element reset --- */
+        input,
+        textarea,
+        select {
+            font-family: inherit;
+            font-size: inherit;
+            border: none;
+            outline: none;
+        }
+
+        /* --- Smooth scrolling --- */
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+
+        /* --- Body base styles --- */
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.65;
+            color: #1a1a2e;
+            background-color: #f5f7fa;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+            overflow-x: hidden;
+        }
+
+        /* --- Selection styling --- */
+        ::selection {
+            background-color: #0052ff;
+            color: #ffffff;
+        }
+
+        ::-moz-selection {
+            background-color: #0052ff;
+            color: #ffffff;
+        }
+
+
+        /* ================================================================ */
+        /*  TYPOGRAPHY                                                      */
+        /* ================================================================ */
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+            color: #0a0a23;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            letter-spacing: -0.02em;
+        }
+
+        h2 {
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            letter-spacing: -0.015em;
+        }
+
+        h3 {
+            font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+            letter-spacing: -0.01em;
+        }
+
+        h4 {
+            font-size: 1.125rem;
+            letter-spacing: -0.005em;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: #444455;
+        }
+
+        .section-label {
+            display: inline-block;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.8125rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #0052ff;
+            margin-bottom: 0.75rem;
+        }
+
+        .section-title {
+            margin-bottom: 1rem;
+            color: #0a0a23;
+        }
+
+        .section-subtitle {
+            font-size: 1.125rem;
+            color: #555566;
+            max-width: 600px;
+            margin: 0 auto 3rem auto;
+            line-height: 1.7;
+        }
+
+
+        /* ================================================================ */
+        /*  CONTAINER & LAYOUT UTILITIES                                    */
+        /* ================================================================ */
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+
+        .container--narrow {
+            max-width: 960px;
+        }
+
+        .container--wide {
+            max-width: 1320px;
+        }
+
+        /* --- Flex utilities --- */
+        .flex {
+            display: flex;
+        }
+
+        .flex--center {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .flex--between {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .flex--column {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .flex--wrap {
+            flex-wrap: wrap;
+        }
+
+        /* --- Grid utilities --- */
+        .grid {
+            display: grid;
+        }
+
+        .grid--2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .grid--3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .grid--4 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+
+        /* ================================================================ */
+        /*  BUTTONS                                                         */
+        /* ================================================================ */
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.75rem;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.9375rem;
+            font-weight: 600;
+            letter-spacing: 0.01em;
+            border-radius: 8px;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            white-space: nowrap;
+            cursor: pointer;
+            border: 2px solid transparent;
+            line-height: 1;
+        }
+
+        .btn--primary {
+            background-color: #0052ff;
+            color: #ffffff;
+            box-shadow: 0 2px 8px rgba(0, 82, 255, 0.25);
+        }
+
+        .btn--primary:hover {
+            background-color: #0045d9;
+            box-shadow: 0 4px 16px rgba(0, 82, 255, 0.4);
+            transform: translateY(-1px);
+        }
+
+        .btn--primary:active {
+            transform: translateY(0);
+            box-shadow: 0 1px 4px rgba(0, 82, 255, 0.3);
+        }
+
+        .btn--outline {
+            background-color: transparent;
+            color: #0052ff;
+            border-color: #0052ff;
+        }
+
+        .btn--outline:hover {
+            background-color: #0052ff;
+            color: #ffffff;
+            box-shadow: 0 4px 16px rgba(0, 82, 255, 0.25);
+            transform: translateY(-1px);
+        }
+
+        .btn--white {
+            background-color: #ffffff;
+            color: #0052ff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn--white:hover {
+            background-color: #f0f4ff;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+            transform: translateY(-1px);
+        }
+
+        .btn--large {
+            padding: 1rem 2.25rem;
+            font-size: 1.0625rem;
+            border-radius: 10px;
+        }
+
+        .btn--small {
+            padding: 0.5rem 1.25rem;
+            font-size: 0.8125rem;
+            border-radius: 6px;
+        }
+
+        .btn--icon-left i {
+            font-size: 1.1em;
+        }
+
+        .btn--icon-right i {
+            font-size: 1.1em;
+        }
+
+
+        /* ================================================================ */
+        /*  NAVIGATION                                                      */
+        /* ================================================================ */
+
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+            height: 72px;
+        }
+
+        .nav--scrolled {
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+            background-color: rgba(255, 255, 255, 0.97);
+        }
+
+        .nav__inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* --- Nav logo --- */
+        .nav__logo {
+            display: flex;
+            align-items: center;
+            gap: 0.625rem;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: #0a0a23;
+            white-space: nowrap;
+            transition: opacity 0.2s ease;
+        }
+
+        .nav__logo:hover {
+            opacity: 0.8;
+        }
+
+        .nav__logo-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: #0052ff;
+            color: #ffffff;
+            border-radius: 10px;
+            font-size: 1.125rem;
+            flex-shrink: 0;
+        }
+
+        /* --- Nav links --- */
+        .nav__links {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .nav__link {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.9375rem;
+            font-weight: 500;
+            color: #444455;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .nav__link:hover {
+            color: #0052ff;
+            background-color: rgba(0, 82, 255, 0.06);
+        }
+
+        /* --- Nav CTA (phone number) --- */
+        .nav__cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.625rem 1.25rem;
+            background-color: #0052ff;
+            color: #ffffff;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.9375rem;
+            font-weight: 600;
+            border-radius: 8px;
+            white-space: nowrap;
+            transition: all 0.25s ease;
+            box-shadow: 0 2px 8px rgba(0, 82, 255, 0.25);
+        }
+
+        .nav__cta:hover {
+            background-color: #0045d9;
+            box-shadow: 0 4px 16px rgba(0, 82, 255, 0.4);
+            transform: translateY(-1px);
+        }
+
+        .nav__cta i {
+            font-size: 0.875rem;
+        }
+
+        /* --- Mobile menu toggle --- */
+        .nav__toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 44px;
+            height: 44px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            gap: 5px;
+            padding: 0;
+        }
+
+        .nav__toggle-bar {
+            width: 24px;
+            height: 2px;
+            background-color: #0a0a23;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+            transform-origin: center;
+        }
+
+        .nav__toggle--active .nav__toggle-bar:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .nav__toggle--active .nav__toggle-bar:nth-child(2) {
+            opacity: 0;
+        }
+
+        .nav__toggle--active .nav__toggle-bar:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+
+        /* ================================================================ */
+        /*  HERO SECTION — Full-screen with Unsplash background             */
+        /*  Uses background-blend-mode: multiply + dark overlay             */
+        /* ================================================================ */
+
+        .hero {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            height: 100vh;
+            padding-top: 72px;
+            background-color: #1a2744;
+            background-image: url('https://images.unsplash.com/photo-1572331165267-854da2b10ccc?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center 40%;
+            background-repeat: no-repeat;
+            background-blend-mode: multiply;
+            overflow: hidden;
+        }
+
+        /* --- Dark overlay for readability --- */
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                180deg,
+                rgba(10, 10, 35, 0.75) 0%,
+                rgba(10, 10, 35, 0.6) 50%,
+                rgba(10, 10, 35, 0.75) 100%
+            );
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        /* --- Subtle grain/texture overlay --- */
+        .hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(
+                ellipse at center,
+                rgba(0, 82, 255, 0.08) 0%,
+                transparent 70%
+            );
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        .hero__content {
+            position: relative;
+            z-index: 3;
+            text-align: center;
+            max-width: 800px;
+            padding: 0 1.5rem;
+        }
+
+        .hero__badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background-color: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 100px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.8125rem;
+            font-weight: 600;
+            color: #ffffff;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero__badge i {
+            color: #4d8bff;
+            font-size: 0.75rem;
+        }
+
+        .hero__title {
+            font-family: 'DM Sans', sans-serif;
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 700;
+            line-height: 1.1;
+            color: #ffffff;
+            margin-bottom: 1.25rem;
+            text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5), 0 1px 3px rgba(0, 0, 0, 0.4);
+            letter-spacing: -0.025em;
+        }
+
+        .hero__title span {
+            color: #4d8bff;
+        }
+
+        .hero__subtitle {
+            font-size: clamp(1.0625rem, 2vw, 1.25rem);
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 2rem;
+            max-width: 560px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.7;
+            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+            font-weight: 400;
+        }
+
+        .hero__actions {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .hero__scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 3;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            animation: heroBounce 2s ease-in-out infinite;
+        }
+
+        .hero__scroll-indicator i {
+            font-size: 1rem;
+        }
+
+        @keyframes heroBounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(8px); }
+        }
+
+
+        /* ================================================================ */
+        /*  SERVICES SECTION                                                */
+        /* ================================================================ */
+
+        .services {
+            padding: 6rem 0;
+            background-color: #ffffff;
+            position: relative;
+        }
+
+        .services__header {
+            text-align: center;
+            margin-bottom: 3.5rem;
+        }
+
+        .services__grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.75rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .service-card {
+            background-color: #f5f7fa;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            border-radius: 16px;
+            padding: 2.25rem 1.75rem;
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(135deg, #0052ff, #4d8bff);
+            opacity: 0;
+            transition: opacity 0.35s ease;
+        }
+
+        .service-card:hover {
+            background-color: #ffffff;
+            border-color: rgba(0, 82, 255, 0.15);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+            transform: translateY(-4px);
+        }
+
+        .service-card:hover::before {
+            opacity: 1;
+        }
+
+        .service-card__icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 56px;
+            height: 56px;
+            background-color: rgba(0, 82, 255, 0.08);
+            color: #0052ff;
+            border-radius: 14px;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+            transition: all 0.35s ease;
+        }
+
+        .service-card:hover .service-card__icon {
+            background-color: #0052ff;
+            color: #ffffff;
+            box-shadow: 0 6px 20px rgba(0, 82, 255, 0.3);
+        }
+
+        .service-card__title {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #0a0a23;
+            margin: 0;
+        }
+
+        .service-card__description {
+            font-size: 0.9375rem;
+            color: #555566;
+            line-height: 1.65;
+            margin: 0;
+            flex-grow: 1;
+        }
+
+        .service-card__link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.375rem;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.9375rem;
+            font-weight: 600;
+            color: #0052ff;
+            transition: gap 0.25s ease;
+        }
+
+        .service-card__link:hover {
+            gap: 0.625rem;
+        }
+
+        .service-card__link i {
+            font-size: 0.75rem;
+            transition: transform 0.25s ease;
+        }
+
+        .service-card__link:hover i {
+            transform: translateX(2px);
+        }
+
+
+        /* ================================================================ */
+        /*  ABOUT SECTION                                                   */
+        /* ================================================================ */
+
+        .about {
+            padding: 6rem 0;
+            background-color: #f5f7fa;
+            position: relative;
+        }
+
+        .about__inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .about__image-wrapper {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+        }
+
+        .about__image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            aspect-ratio: 4/3;
+            border-radius: 20px;
+        }
+
+        .about__image-badge {
+            position: absolute;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            background-color: #ffffff;
+            padding: 1rem 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .about__image-badge i {
+            font-size: 1.5rem;
+            color: #0052ff;
+        }
+
+        .about__image-badge-content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .about__image-badge-value {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #0a0a23;
+            line-height: 1;
+        }
+
+        .about__image-badge-label {
+            font-size: 0.75rem;
+            color: #666677;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        .about__content {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .about__text {
+            font-size: 1.0625rem;
+            color: #555566;
+            line-height: 1.75;
+        }
+
+        .about__text strong {
+            color: #0a0a23;
+            font-weight: 600;
+        }
+
+        .about__check-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            margin-top: 0.5rem;
+        }
+
+        .about__check-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            font-size: 0.9375rem;
+            color: #444455;
+        }
+
+        .about__check-item i {
+            color: #0052ff;
+            font-size: 1.125rem;
+            margin-top: 0.125rem;
+            flex-shrink: 0;
+        }
+
+
+        /* ================================================================ */
+        /*  STATS SECTION — Highlight numbers (area-code based)              */
+        /* ================================================================ */
+
+        .stats {
+            padding: 4rem 0;
+            background-color: #0052ff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stats::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(
+                ellipse at 30% 50%,
+                rgba(255, 255, 255, 0.06) 0%,
+                transparent 60%
+            );
+            pointer-events: none;
+        }
+
+        .stats__grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 1.5rem;
+            border-radius: 12px;
+            transition: background-color 0.3s ease;
+        }
+
+        .stat-card:hover {
+            background-color: rgba(255, 255, 255, 0.08);
+        }
+
+        .stat-card__icon {
+            font-size: 2rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 0.75rem;
+        }
+
+        .stat-card__value {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #ffffff;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-card__label {
+            font-size: 0.9375rem;
+            color: rgba(255, 255, 255, 0.8);
+            font-weight: 500;
+        }
+
+
+        /* ================================================================ */
+        /*  TESTIMONIALS SECTION                                            */
+        /* ================================================================ */
+
+        .testimonials {
+            padding: 6rem 0;
+            background-color: #ffffff;
+            position: relative;
+        }
+
+        .testimonials__header {
+            text-align: center;
+            margin-bottom: 3.5rem;
+        }
+
+        .testimonials__grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.75rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .testimonial-card {
+            background-color: #f5f7fa;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: all 0.35s ease;
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .testimonial-card:hover {
+            background-color: #ffffff;
+            border-color: rgba(0, 82, 255, 0.12);
+            box-shadow: 0 12px 36px rgba(0, 0, 0, 0.07);
+            transform: translateY(-3px);
+        }
+
+        .testimonial-card__stars {
+            display: flex;
+            gap: 0.25rem;
+            color: #f5a623;
+            font-size: 1rem;
+        }
+
+        .testimonial-card__text {
+            font-size: 0.9375rem;
+            color: #555566;
+            line-height: 1.7;
+            font-style: italic;
+            flex-grow: 1;
+        }
+
+        .testimonial-card__author {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding-top: 0.5rem;
+            border-top: 1px solid rgba(0, 0, 0, 0.06);
+        }
+
+        .testimonial-card__avatar {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background-color: #0052ff;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+
+        .testimonial-card__author-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .testimonial-card__author-name {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 600;
+            font-size: 0.9375rem;
+            color: #0a0a23;
+        }
+
+        .testimonial-card__author-role {
+            font-size: 0.8125rem;
+            color: #777788;
+        }
+
+
+        /* ================================================================ */
+        /*  CONTACT SECTION                                                 */
+        /* ================================================================ */
+
+        .contact {
+            padding: 6rem 0;
+            background-color: #f5f7fa;
+            position: relative;
+        }
+
+        .contact__inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .contact__info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .contact__info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .contact__info-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            background-color: rgba(0, 82, 255, 0.08);
+            color: #0052ff;
+            border-radius: 12px;
+            font-size: 1.25rem;
+            flex-shrink: 0;
+        }
+
+        .contact__info-text {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+
+        .contact__info-label {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 600;
+            font-size: 0.9375rem;
+            color: #0a0a23;
+        }
+
+        .contact__info-value {
+            font-size: 0.9375rem;
+            color: #555566;
+            transition: color 0.2s ease;
+        }
+
+        a.contact__info-value:hover {
+            color: #0052ff;
+        }
+
+        .contact__form-wrapper {
+            background-color: #ffffff;
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .contact__form-title {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #0a0a23;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact__form-subtitle {
+            font-size: 0.9375rem;
+            color: #777788;
+            margin-bottom: 1.75rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+
+        .form-label {
+            display: block;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #0a0a23;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-input,
+        .form-textarea,
+        .form-select {
+            width: 100%;
+            padding: 0.875rem 1rem;
+            font-size: 0.9375rem;
+            color: #0a0a23;
+            background-color: #f5f7fa;
+            border: 2px solid transparent;
+            border-radius: 10px;
+            transition: all 0.25s ease;
+            outline: none;
+        }
+
+        .form-input:focus,
+        .form-textarea:focus,
+        .form-select:focus {
+            background-color: #ffffff;
+            border-color: #0052ff;
+            box-shadow: 0 0 0 4px rgba(0, 82, 255, 0.08);
+        }
+
+        .form-input::placeholder,
+        .form-textarea::placeholder {
+            color: #aaaabb;
+        }
+
+        .form-textarea {
+            resize: vertical;
+            min-height: 140px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .form-submit-row {
+            margin-top: 0.5rem;
+        }
+
+        .form-success-message {
+            display: none;
+            padding: 1rem;
+            background-color: #ecfdf3;
+            border: 1px solid #a6f4c5;
+            border-radius: 10px;
+            color: #067647;
+            font-weight: 500;
+            font-size: 0.9375rem;
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .form-success-message--visible {
+            display: block;
+        }
+
+        .form-error-message {
+            display: none;
+            padding: 1rem;
+            background-color: #fef3f2;
+            border: 1px solid #fecdca;
+            border-radius: 10px;
+            color: #b42318;
+            font-weight: 500;
+            font-size: 0.9375rem;
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .form-error-message--visible {
+            display: block;
+        }
+
+
+        /* ================================================================ */
+        /*  CTA BANNER                                                      */
+        /* ================================================================ */
+
+        .cta-banner {
+            padding: 5rem 0;
+            background-color: #0052ff;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .cta-banner::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(
+                ellipse at 70% 30%,
+                rgba(255, 255, 255, 0.08) 0%,
+                transparent 60%
+            );
+            pointer-events: none;
+        }
+
+        .cta-banner__content {
+            position: relative;
+            z-index: 1;
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .cta-banner__title {
+            font-family: 'DM Sans', sans-serif;
+            font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .cta-banner__text {
+            font-size: 1.125rem;
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .cta-banner__actions {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+
+        /* ================================================================ */
+        /*  FOOTER                                                          */
+        /* ================================================================ */
+
+        .footer {
+            background-color: #0a0a23;
+            color: rgba(255, 255, 255, 0.7);
+            padding: 5rem 0 0 0;
+        }
+
+        .footer__grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem 3rem 1.5rem;
+        }
+
+        .footer__brand-name {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 1rem;
+        }
+
+        .footer__brand-desc {
+            font-size: 0.9375rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            color: rgba(255, 255, 255, 0.55);
+        }
+
+        .footer__social {
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        .footer__social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.08);
+            color: rgba(255, 255, 255, 0.6);
+            border-radius: 10px;
+            font-size: 1.125rem;
+            transition: all 0.25s ease;
+        }
+
+        .footer__social-link:hover {
+            background-color: #0052ff;
+            color: #ffffff;
+        }
+
+        .footer__heading {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.9375rem;
+            font-weight: 700;
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-bottom: 1.25rem;
+        }
+
+        .footer__links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .footer__link {
+            font-size: 0.9375rem;
+            color: rgba(255, 255, 255, 0.55);
+            transition: color 0.2s ease;
+        }
+
+        .footer__link:hover {
+            color: #ffffff;
+        }
+
+        .footer__contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+            font-size: 0.9375rem;
+            color: rgba(255, 255, 255, 0.55);
+        }
+
+        .footer__contact-item i {
+            color: #4d8bff;
+            font-size: 1rem;
+            margin-top: 0.2rem;
+            flex-shrink: 0;
+        }
+
+        .footer__contact-item a {
+            color: rgba(255, 255, 255, 0.55);
+            transition: color 0.2s ease;
+        }
+
+        .footer__contact-item a:hover {
+            color: #ffffff;
+        }
+
+        .footer__bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 1.5rem 0;
+            text-align: center;
+            font-size: 0.875rem;
+            color: rgba(255, 255, 255, 0.35);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+
+
+        /* ================================================================ */
+        /*  ANIMATIONS                                                      */
+        /* ================================================================ */
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                box-shadow: 0 0 0 0 rgba(0, 82, 255, 0.4);
+            }
+            50% {
+                box-shadow: 0 0 0 12px rgba(0, 82, 255, 0);
+            }
+        }
+
+        .animate-fade-in-up {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 0.6s ease-out forwards;
+        }
+
+        .animate-scale-in {
+            animation: scaleIn 0.5s ease-out forwards;
+        }
+
+        /* --- Staggered service card animations --- */
+        .service-card:nth-child(1) { animation-delay: 0.1s; }
+        .service-card:nth-child(2) { animation-delay: 0.2s; }
+        .service-card:nth-child(3) { animation-delay: 0.3s; }
+        .service-card:nth-child(4) { animation-delay: 0.4s; }
+        .service-card:nth-child(5) { animation-delay: 0.5s; }
+        .service-card:nth-child(6) { animation-delay: 0.6s; }
+
+        /* --- Staggered testimonial animations --- */
+        .testimonial-card:nth-child(1) { animation-delay: 0.1s; }
+        .testimonial-card:nth-child(2) { animation-delay: 0.25s; }
+        .testimonial-card:nth-child(3) { animation-delay: 0.4s; }
+
+        /* --- Stat counter animation --- */
+        .stat-card__value {
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+
+        /* ================================================================ */
+        /*  BACK TO TOP BUTTON                                              */
+        /* ================================================================ */
+
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 999;
+            width: 48px;
+            height: 48px;
+            background-color: #0052ff;
+            color: #ffffff;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            box-shadow: 0 4px 16px rgba(0, 82, 255, 0.35);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .back-to-top--visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .back-to-top:hover {
+            background-color: #0045d9;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(0, 82, 255, 0.5);
+        }
+
+
+        /* ================================================================ */
+        /*  MEDIA QUERIES — Responsive Design                                */
+        /* ================================================================ */
+
+        /* --- Tablet: 768px - 1024px --- */
+        @media (max-width: 1024px) {
+
+            .services__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .testimonials__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .testimonial-card:last-child {
+                grid-column: span 2;
+                max-width: 400px;
+                justify-self: center;
+            }
+
+            .about__inner {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+
+            .about__image-wrapper {
+                max-width: 600px;
+                margin: 0 auto;
+            }
+
+            .contact__inner {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+
+            .stats__grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+
+            .footer__grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 2rem;
+            }
+
+            .nav__links {
+                gap: 0;
+            }
+
+            .nav__link {
+                padding: 0.5rem 0.75rem;
+                font-size: 0.875rem;
+            }
+        }
+
+        /* --- Mobile: below 768px --- */
+        @media (max-width: 768px) {
+
+            /* --- Navigation mobile --- */
+            .nav__links {
+                position: fixed;
+                top: 72px;
+                left: 0;
+                right: 0;
+                background-color: #ffffff;
+                flex-direction: column;
+                padding: 1.5rem;
+                gap: 0.5rem;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+                transform: translateY(-120%);
+                opacity: 0;
+                transition: all 0.3s ease;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+            }
+
+            .nav__links--open {
+                transform: translateY(0);
+                opacity: 1;
+            }
+
+            .nav__toggle {
+                display: flex;
+            }
+
+            .nav__cta {
+                padding: 0.5rem 1rem;
+                font-size: 0.8125rem;
+            }
+
+            /* --- Hero mobile --- */
+            .hero__title {
+                font-size: clamp(2rem, 8vw, 3rem);
+            }
+
+            .hero__actions {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .hero__actions .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            /* --- Services mobile --- */
+            .services__grid {
+                grid-template-columns: 1fr;
+            }
+
+            /* --- About mobile --- */
+            .about__inner {
+                grid-template-columns: 1fr;
+            }
+
+            /* --- Stats mobile --- */
+            .stats__grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            /* --- Testimonials mobile --- */
+            .testimonials__grid {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonial-card:last-child {
+                grid-column: span 1;
+                max-width: none;
+                justify-self: auto;
+            }
+
+            /* --- Contact mobile --- */
+            .contact__inner {
+                grid-template-columns: 1fr;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .contact__form-wrapper {
+                padding: 1.5rem;
+            }
+
+            /* --- Footer mobile --- */
+            .footer__grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            /* --- CTA banner mobile --- */
+            .cta-banner__actions {
+                flex-direction: column;
+                width: 100%;
+                max-width: 300px;
+                margin: 0 auto;
+            }
+
+            .cta-banner__actions .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            /* --- General mobile adjustments --- */
+            .section-title {
+                font-size: 1.75rem;
+            }
+
+            .section-subtitle {
+                font-size: 1rem;
+            }
+        }
+
+        /* --- Small Mobile: below 480px --- */
+        @media (max-width: 480px) {
+
+            .hero {
+                min-height: 100svh;
+                height: 100svh;
+            }
+
+            .hero__badge {
+                font-size: 0.75rem;
+                padding: 0.375rem 0.875rem;
+            }
+
+            .hero__title {
+                font-size: 1.75rem;
+            }
+
+            .hero__subtitle {
+                font-size: 0.9375rem;
+            }
+
+            .btn--large {
+                padding: 0.875rem 1.75rem;
+                font-size: 0.9375rem;
+            }
+
+            .service-card {
+                padding: 1.75rem 1.25rem;
+            }
+
+            .testimonial-card {
+                padding: 1.5rem;
+            }
+
+            .contact__form-wrapper {
+                padding: 1.25rem;
+            }
+
+            .back-to-top {
+                bottom: 1rem;
+                right: 1rem;
+                width: 42px;
+                height: 42px;
+                font-size: 1rem;
+            }
+        }
+
+        /* --- Large desktop: above 1400px --- */
+        @media (min-width: 1400px) {
+
+            .container {
+                max-width: 1320px;
+            }
+
+            .services__grid {
+                max-width: 1320px;
+            }
+
+            .hero__title {
+                font-size: 4.5rem;
+            }
+        }
+
+        /* --- Print styles --- */
+        @media print {
+
+            .nav,
+            .back-to-top,
+            .hero__scroll-indicator {
+                display: none !important;
+            }
+
+            body {
+                font-size: 12pt;
+                color: #000;
+            }
+
+            .hero {
+                min-height: auto;
+                height: auto;
+            }
+
+            .hero__content {
+                color: #000;
+            }
+
+            .hero__title {
+                color: #000;
+                text-shadow: none;
+            }
+
+            .hero__subtitle {
+                color: #333;
+                text-shadow: none;
+            }
+        }
+
+
+        /* ================================================================ */
+        /*  REDUCED MOTION                                                  */
+        /* ================================================================ */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+
+            html {
+                scroll-behavior: auto;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- ============================================================ -->
+    <!--  NAVIGATION                                                  -->
+    <!-- ============================================================ -->
+
+    <nav class="nav" id="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav__inner">
+            <!-- Logo -->
+            <a href="#" class="nav__logo" aria-label="Rudy's Pools & Carpentry Shop — Home">
+                <span class="nav__logo-icon">
+                    <i class="fa-solid fa-water-ladder"></i>
+                </span>
+                <span>Rudy's Pools &amp; Carpentry Shop</span>
+            </a>
+
+            <!-- Navigation links -->
+            <ul class="nav__links" id="navLinks" role="menubar">
+                <li role="none">
+                    <a href="#services" class="nav__link" role="menuitem">Services</a>
+                </li>
+                <li role="none">
+                    <a href="#about" class="nav__link" role="menuitem">About</a>
+                </li>
+                <li role="none">
+                    <a href="#testimonials" class="nav__link" role="menuitem">Reviews</a>
+                </li>
+                <li role="none">
+                    <a href="#contact" class="nav__link" role="menuitem">Contact</a>
+                </li>
+            </ul>
+
+            <!-- Phone CTA -->
+            <a href="tel:+14167064899" class="nav__cta" aria-label="Call Rudy's Pools at 416-706-4899">
+                <i class="fa-solid fa-phone"></i>
+                <span>416-706-4899</span>
+            </a>
+
+            <!-- Mobile menu toggle -->
+            <button
+                class="nav__toggle"
+                id="navToggle"
+                aria-label="Toggle navigation menu"
+                aria-expanded="false"
+            >
+                <span class="nav__toggle-bar"></span>
+                <span class="nav__toggle-bar"></span>
+                <span class="nav__toggle-bar"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ============================================================ -->
+    <!--  HERO SECTION                                                -->
+    <!-- ============================================================ -->
+
+    <section class="hero" id="hero" aria-labelledby="hero-heading">
+        <div class="hero__content">
+            <!-- Badge -->
+            <div class="hero__badge animate-fade-in">
+                <i class="fa-solid fa-map-pin"></i>
+                <span>Serving Barrie &amp; Surrounding Area</span>
+            </div>
+
+            <!-- Headline -->
+            <h1 class="hero__title animate-fade-in-up" id="hero-heading">
+                Your Backyard,
+                <span>Reimagined</span>
+            </h1>
+
+            <!-- Subheadline -->
+            <p class="hero__subtitle animate-fade-in-up" style="animation-delay: 0.15s;">
+                Rudy's Pools &amp; Carpentry Shop brings expert pool installation,
+                custom deck building, and fine carpentry to homeowners across Barrie, Ontario.
+                Quality craftsmanship you can trust.
+            </p>
+
+            <!-- CTA buttons -->
+            <div class="hero__actions animate-fade-in-up" style="animation-delay: 0.3s;">
+                <a href="#contact" class="btn btn--primary btn--large btn--icon-right">
+                    Get a Free Quote
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="tel:+14167064899" class="btn btn--white btn--large btn--icon-left">
+                    <i class="fa-solid fa-phone"></i>
+                    416-706-4899
+                </a>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="hero__scroll-indicator" aria-hidden="true">
+            <span>Scroll</span>
+            <i class="fa-solid fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!--  SERVICES SECTION                                            -->
+    <!-- ============================================================ -->
+
+    <section class="services" id="services" aria-labelledby="services-heading">
+        <div class="container">
+            <!-- Section header -->
+            <div class="services__header">
+                <span class="section-label">What We Do</span>
+                <h2 class="section-title" id="services-heading">Our Services</h2>
+                <p class="section-subtitle">
+                    From pristine pool installations to custom carpentry masterpieces,
+                    we deliver end-to-end outdoor living solutions with precision and care.
+                </p>
+            </div>
+
+            <!-- Service cards grid -->
+            <div class="services__grid">
+
+                <!-- Card 1: Pool Installation -->
+                <article class="service-card animate-fade-in-up">
+                    <div class="service-card__icon">
+                        <i class="fa-solid fa-water-ladder"></i>
+                    </div>
+                    <h3 class="service-card__title">Pool Installation</h3>
+                    <p class="service-card__description">
+                        Full in-ground and above-ground pool installation services.
+                        We handle excavation, plumbing, electrical, and finishing
+                        so your backyard oasis is ready for summer.
+                    </p>
+                    <a href="#contact" class="service-card__link">
+                        Learn more
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </article>
+
+                <!-- Card 2: Pool Repair -->
+                <article class="service-card animate-fade-in-up">
+                    <div class="service-card__icon">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                    </div>
+                    <h3 class="service-card__title">Pool Repair</h3>
+                    <p class="service-card__description">
+                        Leak detection, liner replacement, pump and filtration repairs,
+                        and structural fixes. We keep your pool running safely
+                        and efficiently all season long.
+                    </p>
+                    <a href="#contact" class="service-card__link">
+                        Learn more
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </article>
+
+                <!-- Card 3: Deck Building -->
+                <article class="service-card animate-fade-in-up">
+                    <div class="service-card__icon">
+                        <i class="fa-solid fa-house"></i>
+                    </div>
+                    <h3 class="service-card__title">Deck Building</h3>
+                    <p class="service-card__description">
+                        Custom wood and composite decks designed to complement
+                        your home and landscape. From poolside platforms to
+                        multi-level entertainer decks with built-in seating.
+                    </p>
+                    <a href="#contact" class="service-card__link">
+                        Learn more
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </article>
+
+                <!-- Card 4: Custom Fencing -->
+                <article class="service-card animate-fade-in-up">
+                    <div class="service-card__icon">
+                        <i class="fa-solid fa-fence"></i>
+                    </div>
+                    <h3 class="service-card__title">Custom Fencing</h3>
+                    <p class="service-card__description">
+                        Privacy fences, decorative picket fencing, and pool-safe
+                        enclosures built to Ontario code. Beautiful boundaries
+                        that add security and curb appeal.
+                    </p>
+                    <a href="#contact" class="service-card__link">
+                        Learn more
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </article>
+
+                <!-- Card 5: Outdoor Kitchens -->
+                <article class="service-card animate-fade-in-up">
+                    <div class="service-card__icon">
+                        <i class="fa-solid fa-fire-burner"></i>
+                    </div>
+                    <h3 class="service-card__title">Outdoor Kitchens</h3>
+                    <p class="service-card__description">
+                        Complete outdoor cooking and dining areas with built-in
+                        grills, countertops, refrigerators, and weatherproof
+                        cabinetry for the ultimate backyard entertaining.
+                    </p>
+                    <a href="#contact" class="service-card__link">
+                        Learn more
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </article>
+
+                <!-- Card 6: Carpentry Services -->
+                <article class="service-card animate-fade-in-up">
+                    <div class="service-card__icon">
+                        <i class="fa-solid fa-hammer"></i>
+                    </div>
+                    <h3 class="service-card__title">Carpentry Services</h3>
+                    <p class="service-card__description">
+                        Custom interior and exterior carpentry including built-ins,
+                        pergolas, gazebos, trim work, and structural framing.
+                        Precision craftsmanship for every project.
+                    </p>
+                    <a href="#contact" class="service-card__link">
+                        Learn more
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!--  ABOUT SECTION                                               -->
+    <!-- ============================================================ -->
+
+    <section class="about" id="about" aria-labelledby="about-heading">
+        <div class="about__inner">
+            <!-- About image -->
+            <div class="about__image-wrapper animate-fade-in-up">
+                <img
+                    src="https://images.unsplash.com/photo-1598908311792-4d1d6b0b0d0f?auto=format&fit=crop&w=800&q=80"
+                    alt="Professional pool and deck installation by Rudy's Pools & Carpentry Shop in Barrie, Ontario"
+                    loading="lazy"
+                >
+                <!-- Floating badge -->
+                <div class="about__image-badge">
+                    <i class="fa-solid fa-award"></i>
+                    <div class="about__image-badge-content">
+                        <span class="about__image-badge-value">705</span>
+                        <span class="about__image-badge-label">Area Code</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- About content -->
+            <div class="about__content animate-fade-in-up" style="animation-delay: 0.2s;">
+                <span class="section-label">About Us</span>
+                <h2 class="section-title" id="about-heading">
+                    Rudy's Pools &amp; Carpentry Shop
+                </h2>
+                <p class="about__text">
+                    Based in <strong>Barrie, Ontario</strong>, Rudy's Pools &amp; Carpentry Shop
+                    is a family-operated business built on a foundation of skilled
+                    craftsmanship and honest service. We specialize in transforming
+                    ordinary backyards into extraordinary outdoor living spaces.
+                </p>
+                <p class="about__text">
+                    Whether you're dreaming of a sparkling new pool, a spacious
+                    custom deck, or a complete backyard renovation, our team brings
+                    decades of combined experience to every project. We pride ourselves
+                    on clear communication, transparent pricing, and work that stands
+                    the test of time.
+                </p>
+
+                <!-- Check list -->
+                <div class="about__check-list">
+                    <div class="about__check-item">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>Fully licensed and insured for your peace of mind</span>
+                    </div>
+                    <div class="about__check-item">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>Serving Simcoe County including Barrie, Innisfil, and Orillia</span>
+                    </div>
+                    <div class="about__check-item">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>Free on-site consultations and detailed project estimates</span>
+                    </div>
+                    <div class="about__check-item">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>Premium materials sourced from trusted Canadian suppliers</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!--  STATS SECTION                                               -->
+    <!-- ============================================================ -->
+
+    <section class="stats" aria-label="Key statistics">
+        <div class="stats__grid">
+
+            <!-- Stat 1: Area Code 705 -->
+            <div class="stat-card">
+                <div class="stat-card__icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div class="stat-card__value" data-count="705" data-prefix="">705</div>
+                <div class="stat-card__label">Simcoe County Area Code</div>
+            </div>
+
+            <!-- Stat 2: Region 416 -->
+            <div class="stat-card">
+                <div class="stat-card__icon">
+                    <i class="fa-solid fa-phone-volume"></i>
+                </div>
+                <div class="stat-card__value" data-count="416" data-prefix="">416</div>
+                <div class="stat-card__label">GTA Connection</div>
+            </div>
+
+            <!-- Stat 3: Projects -->
+            <div class="stat-card">
+                <div class="stat-card__icon">
+                    <i class="fa-solid fa-clipboard-check"></i>
+                </div>
+                <div class="stat-card__value" data-count="250" data-prefix="" data-suffix="+">250+</div>
+                <div class="stat-card__label">Projects Completed</div>
+            </div>
+
+            <!-- Stat 4: Rating -->
+            <div class="stat-card">
+                <div class="stat-card__icon">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="stat-card__value" data-count="4.9" data-prefix="">4.9</div>
+                <div class="stat-card__label">Average Client Rating</div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!--  TESTIMONIALS SECTION                                        -->
+    <!-- ============================================================ -->
+
+    <section class="testimonials" id="testimonials" aria-labelledby="testimonials-heading">
+        <div class="container">
+            <!-- Section header -->
+            <div class="testimonials__header">
+                <span class="section-label">Client Feedback</span>
+                <h2 class="section-title" id="testimonials-heading">What Our Clients Say</h2>
+                <p class="section-subtitle">
+                    Real reviews from homeowners across Barrie and Simcoe County
+                    who trusted us with their outdoor projects.
+                </p>
+            </div>
+
+            <!-- Testimonial cards -->
+            <div class="testimonials__grid">
+
+                <!-- Testimonial 1 -->
+                <blockquote class="testimonial-card animate-fade-in-up">
+                    <div class="testimonial-card__stars" aria-label="5 out of 5 stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="testimonial-card__text">
+                        "Rudy's team installed our inground pool and built a gorgeous
+                        wrap-around deck. The craftsmanship is outstanding and they
+                        finished ahead of schedule. Our backyard has never looked better."
+                    </p>
+                    <div class="testimonial-card__author">
+                        <div class="testimonial-card__avatar">MS</div>
+                        <div class="testimonial-card__author-info">
+                            <span class="testimonial-card__author-name">Michael S.</span>
+                            <span class="testimonial-card__author-role">Homeowner, Barrie</span>
+                        </div>
+                    </div>
+                </blockquote>
+
+                <!-- Testimonial 2 -->
+                <blockquote class="testimonial-card animate-fade-in-up">
+                    <div class="testimonial-card__stars" aria-label="5 out of 5 stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="testimonial-card__text">
+                        "We hired Rudy's for a custom fence and outdoor kitchen project.
+                        The attention to detail was incredible — every joint, every cut,
+                        every finish is perfect. Highly recommend to anyone in the area."
+                    </p>
+                    <div class="testimonial-card__author">
+                        <div class="testimonial-card__avatar">JL</div>
+                        <div class="testimonial-card__author-info">
+                            <span class="testimonial-card__author-name">Jennifer L.</span>
+                            <span class="testimonial-card__author-role">Homeowner, Innisfil</span>
+                        </div>
+                    </div>
+                </blockquote>
+
+                <!-- Testimonial 3 -->
+                <blockquote class="testimonial-card animate-fade-in-up">
+                    <div class="testimonial-card__stars" aria-label="5 out of 5 stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="testimonial-card__text">
+                        "Our pool needed major repairs and Rudy's team came through
+                        with flying colors. They diagnosed the issue quickly, explained
+                        everything clearly, and the repair work is rock solid.
+                        Honest, reliable, and skilled."
+                    </p>
+                    <div class="testimonial-card__author">
+                        <div class="testimonial-card__avatar">DT</div>
+                        <div class="testimonial-card__author-info">
+                            <span class="testimonial-card__author-name">David T.</span>
+                            <span class="testimonial-card__author-role">Homeowner, Orillia</span>
+                        </div>
+                    </div>
+                </blockquote>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!--  CONTACT SECTION                                             -->
+    <!-- ============================================================ -->
+
+    <section class="contact" id="contact" aria-labelledby="contact-heading">
+        <div class="contact__inner">
+            <!-- Contact info -->
+            <div class="contact__info animate-fade-in-up">
+                <div>
+                    <span class="section-label">Get In Touch</span>
+                    <h2 class="section-title" id="contact-heading">Contact Us</h2>
+                    <p class="section-subtitle" style="margin-left: 0; text-align: left;">
+                        Ready to transform your outdoor space? Reach out for a free,
+                        no-obligation consultation and estimate.
+                    </p>
+                </div>
+
+                <!-- Phone -->
+                <div class="contact__info-item">
+                    <div class="contact__info-icon">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div class="contact__info-text">
+                        <span class="contact__info-label">Phone</span>
+                        <a href="tel:+14167064899" class="contact__info-value">416-706-4899</a>
+                    </div>
+                </div>
+
+                <!-- Email -->
+                <div class="contact__info-item">
+                    <div class="contact__info-icon">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div class="contact__info-text">
+                        <span class="contact__info-label">Email</span>
+                        <a href="mailto:info@rudyspools.ca" class="contact__info-value">info@rudyspools.ca</a>
+                    </div>
+                </div>
+
+                <!-- Location -->
+                <div class="contact__info-item">
+                    <div class="contact__info-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div class="contact__info-text">
+                        <span class="contact__info-label">Location</span>
+                        <span class="contact__info-value">Barrie, Ontario — Serving Simcoe County</span>
+                    </div>
+                </div>
+
+                <!-- Hours -->
+                <div class="contact__info-item">
+                    <div class="contact__info-icon">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+                    <div class="contact__info-text">
+                        <span class="contact__info-label">Business Hours</span>
+                        <span class="contact__info-value">Monday – Friday: 7:00 AM – 6:00 PM</span>
+                        <span class="contact__info-value">Saturday: 8:00 AM – 4:00 PM</span>
+                        <span class="contact__info-value">Sunday: Closed</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact form -->
+            <div class="contact__form-wrapper animate-fade-in-up" style="animation-delay: 0.2s;">
+                <h3 class="contact__form-title">Request a Quote</h3>
+                <p class="contact__form-subtitle">
+                    Fill out the form below and we'll get back to you within 24 hours.
+                </p>
+
+                <form id="contactForm" novalidate>
+                    <!-- Name fields -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName" class="form-label">First Name *</label>
+                            <input
+                                type="text"
+                                id="firstName"
+                                name="firstName"
+                                class="form-input"
+                                placeholder="John"
+                                required
+                                autocomplete="given-name"
+                            >
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName" class="form-label">Last Name *</label>
+                            <input
+                                type="text"
+                                id="lastName"
+                                name="lastName"
+                                class="form-input"
+                                placeholder="Smith"
+                                required
+                                autocomplete="family-name"
+                            >
+                        </div>
+                    </div>
+
+                    <!-- Email & Phone -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email *</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                class="form-input"
+                                placeholder="john@example.com"
+                                required
+                                autocomplete="email"
+                            >
+                        </div>
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Phone</label>
+                            <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                class="form-input"
+                                placeholder="(705) 555-0123"
+                                autocomplete="tel"
+                            >
+                        </div>
+                    </div>
+
+                    <!-- Service interest -->
+                    <div class="form-group">
+                        <label for="service" class="form-label">Service Interested In *</label>
+                        <select id="service" name="service" class="form-select" required>
+                            <option value="" disabled selected>Select a service...</option>
+                            <option value="pool-installation">Pool Installation</option>
+                            <option value="pool-repair">Pool Repair</option>
+                            <option value="deck-building">Deck Building</option>
+                            <option value="custom-fencing">Custom Fencing</option>
+                            <option value="outdoor-kitchens">Outdoor Kitchens</option>
+                            <option value="carpentry">Carpentry Services</option>
+                            <option value="other">Other / Multiple Services</option>
+                        </select>
+                    </div>
+
+                    <!-- Message -->
+                    <div class="form-group">
+                        <label for="message" class="form-label">Project Details *</label>
+                        <textarea
+                            id="message"
+                            name="message"
+                            class="form-textarea"
+                            placeholder="Tell us about your project — what are you looking to build or repair?"
+                            required
+                            rows="5"
+                        ></textarea>
+                    </div>
+
+                    <!-- Submit -->
+                    <div class="form-submit-row">
+                        <button type="submit" class="btn btn--primary btn--large" style="width: 100%;">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            Send Request
+                        </button>
+                    </div>
+
+                    <!-- Success message (hidden by default) -->
+                    <div class="form-success-message" id="formSuccess" role="status">
+                        <i class="fa-solid fa-circle-check"></i>
+                        Thank you! Your message has been sent. We'll be in touch within 24 hours.
+                    </div>
+
+                    <!-- Error message (hidden by default) -->
+                    <div class="form-error-message" id="formError" role="alert">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                        Please fill in all required fields correctly.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!--  CTA BANNER                                                  -->
+    <!-- ============================================================ -->
+
+    <section class="cta-banner" aria-labelledby="cta-heading">
+        <div class="cta-banner__content">
+            <h2 class="cta-banner__title" id="cta-heading">
+                Ready to Build Your Dream Backyard?
+            </h2>
+            <p class="cta-banner__text">
+                Call Rudy's Pools &amp; Carpentry Shop today for a free consultation.
+                Proudly serving Barrie and Simcoe County.
+            </p>
+            <div class="cta-banner__actions">
+                <a href="tel:+14167064899" class="btn btn--white btn--large btn--icon-left">
+                    <i class="fa-solid fa-phone"></i>
+                    416-706-4899
+                </a>
+                <a href="#contact" class="btn btn--outline btn--large" style="border-color: #ffffff; color: #ffffff;">
+                    Request a Quote
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!--  FOOTER                                                      -->
+    <!-- ============================================================ -->
+
+    <footer class="footer" role="contentinfo">
+        <div class="footer__grid">
+            <!-- Brand column -->
+            <div class="footer__brand">
+                <div class="footer__brand-name">
+                    <i class="fa-solid fa-water-ladder" style="margin-right: 0.5rem; color: #4d8bff;"></i>
+                    Rudy's Pools &amp; Carpentry Shop
+                </div>
+                <p class="footer__brand-desc">
+                    Professional pool installation, repair, custom carpentry, and outdoor
+                    living solutions in Barrie, Ontario. Quality craftsmanship and honest
+                    service — that's the Rudy's promise.
+                </p>
+                <div class="footer__social">
+                    <a href="#" class="footer__social-link" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="footer__social-link" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#" class="footer__social-link" aria-label="Houzz">
+                        <i class="fa-brands fa-houzz"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Services links -->
+            <div class="footer__column">
+                <h4 class="footer__heading">Services</h4>
+                <ul class="footer__links">
+                    <li><a href="#services" class="footer__link">Pool Installation</a></li>
+                    <li><a href="#services" class="footer__link">Pool Repair</a></li>
+                    <li><a href="#services" class="footer__link">Deck Building</a></li>
+                    <li><a href="#services" class="footer__link">Custom Fencing</a></li>
+                    <li><a href="#services" class="footer__link">Outdoor Kitchens</a></li>
+                    <li><a href="#services" class="footer__link">Carpentry</a></li>
+                </ul>
+            </div>
+
+            <!-- Quick links -->
+            <div class="footer__column">
+                <h4 class="footer__heading">Quick Links</h4>
+                <ul class="footer__links">
+                    <li><a href="#hero" class="footer__link">Home</a></li>
+                    <li><a href="#about" class="footer__link">About Us</a></li>
+                    <li><a href="#testimonials" class="footer__link">Reviews</a></li>
+                    <li><a href="#contact" class="footer__link">Contact</a></li>
+                    <li><a href="#contact" class="footer__link">Get a Quote</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact column -->
+            <div class="footer__column">
+                <h4 class="footer__heading">Contact</h4>
+                <div class="footer__contact-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <a href="tel:+14167064899">416-706-4899</a>
+                </div>
+                <div class="footer__contact-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <a href="mailto:info@rudyspools.ca">info@rudyspools.ca</a>
+                </div>
+                <div class="footer__contact-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>Barrie, Ontario</span>
+                </div>
+                <div class="footer__contact-item">
+                    <i class="fa-solid fa-clock"></i>
+                    <span>Mon–Fri: 7 AM – 6 PM</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom bar -->
+        <div class="footer__bottom">
+            <p>&copy; 2026 Rudy's Pools &amp; Carpentry Shop. All rights reserved. | Serving Barrie, ON &amp; Simcoe County.</p>
+        </div>
+    </footer>
+
+    <!-- ============================================================ -->
+    <!--  BACK TO TOP BUTTON                                          -->
+    <!-- ============================================================ -->
+
+    <button
+        class="back-to-top"
+        id="backToTop"
+        aria-label="Back to top"
+        title="Back to top"
+    >
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+
+    <!-- ============================================================ -->
+    <!--  JAVASCRIPT — Navigation, Scroll Effects, Form Handling      -->
+    <!-- ============================================================ -->
+
+    <script>
+        (function () {
+            'use strict';
+
+            // ========================================================
+            //  DOM ELEMENT REFERENCES
+            // ========================================================
+
+            var navbar = document.getElementById('navbar');
+            var navToggle = document.getElementById('navToggle');
+            var navLinks = document.getElementById('navLinks');
+            var backToTop = document.getElementById('backToTop');
+            var contactForm = document.getElementById('contactForm');
+            var formSuccess = document.getElementById('formSuccess');
+            var formError = document.getElementById('formError');
+
+            // ========================================================
+            //  NAVIGATION SCROLL EFFECT
+            // ========================================================
+
+            var lastScrollY = 0;
+            var scrollThreshold = 50;
+
+            function handleScroll() {
+                var currentScrollY = window.scrollY || window.pageYOffset;
+
+                // Add scrolled class for shadow
+                if (currentScrollY > scrollThreshold) {
+                    navbar.classList.add('nav--scrolled');
+                } else {
+                    navbar.classList.remove('nav--scrolled');
+                }
+
+                // Back to top button visibility
+                if (currentScrollY > 600) {
+                    backToTop.classList.add('back-to-top--visible');
+                } else {
+                    backToTop.classList.remove('back-to-top--visible');
+                }
+
+                lastScrollY = currentScrollY;
+            }
+
+            // ========================================================
+            //  MOBILE MENU TOGGLE
+            // ========================================================
+
+            function toggleMobileMenu() {
+                var isOpen = navLinks.classList.contains('nav__links--open');
+
+                if (isOpen) {
+                    navLinks.classList.remove('nav__links--open');
+                    navToggle.classList.remove('nav__toggle--active');
+                    navToggle.setAttribute('aria-expanded', 'false');
+                } else {
+                    navLinks.classList.add('nav__links--open');
+                    navToggle.classList.add('nav__toggle--active');
+                    navToggle.setAttribute('aria-expanded', 'true');
+                }
+            }
+
+            function closeMobileMenu() {
+                navLinks.classList.remove('nav__links--open');
+                navToggle.classList.remove('nav__toggle--active');
+                navToggle.setAttribute('aria-expanded', 'false');
+            }
+
+            // ========================================================
+            //  SMOOTH SCROLL FOR NAV LINKS (mobile close)
+            // ========================================================
+
+            function handleNavLinkClick(event) {
+                var target = event.currentTarget;
+                var href = target.getAttribute('href');
+
+                // Close mobile menu
+                closeMobileMenu();
+
+                // If it's an anchor link, smooth scroll
+                if (href && href.startsWith('#')) {
+                    var targetElement = document.querySelector(href);
+                    if (targetElement) {
+                        event.preventDefault();
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                }
+            }
+
+            // ========================================================
+            //  BACK TO TOP
+            // ========================================================
+
+            function scrollToTop() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            }
+
+            // ========================================================
+            //  CONTACT FORM HANDLING
+            // ========================================================
+
+            function handleFormSubmit(event) {
+                event.preventDefault();
+
+                // Hide any previous messages
+                formSuccess.classList.remove('form-success-message--visible');
+                formError.classList.remove('form-error-message--visible');
+
+                // Get form fields
+                var firstName = document.getElementById('firstName').value.trim();
+                var lastName = document.getElementById('lastName').value.trim();
+                var email = document.getElementById('email').value.trim();
+                var service = document.getElementById('service').value;
+                var message = document.getElementById('message').value.trim();
+
+                // Basic validation
+                if (!firstName || !lastName || !email || !service || !message) {
+                    formError.classList.add('form-error-message--visible');
+                    formError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    return;
+                }
+
+                // Simple email validation
+                var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email)) {
+                    formError.classList.add('form-error-message--visible');
+                    formError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    return;
+                }
+
+                // Simulate form submission (demo)
+                // In production, this would send data to a server endpoint
+                formSuccess.classList.add('form-success-message--visible');
+                formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+                // Reset form after successful submission
+                contactForm.reset();
+
+                // Hide success message after 6 seconds
+                setTimeout(function () {
+                    formSuccess.classList.remove('form-success-message--visible');
+                }, 6000);
+            }
+
+            // ========================================================
+            //  INTERSECTION OBSERVER — Animate stats when visible
+            // ========================================================
+
+            function setupStatAnimation() {
+                var statValues = document.querySelectorAll('.stat-card__value[data-count]');
+
+                if (!('IntersectionObserver' in window)) {
+                    // Fallback: show all stats immediately
+                    statValues.forEach(function (el) {
+                        el.style.opacity = '1';
+                    });
+                    return;
+                }
+
+                var observerOptions = {
+                    root: null,
+                    rootMargin: '0px',
+                    threshold: 0.3
+                };
+
+                var observer = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting) {
+                            var el = entry.target;
+                            animateStatValue(el);
+                            observer.unobserve(el);
+                        }
+                    });
+                }, observerOptions);
+
+                statValues.forEach(function (el) {
+                    observer.observe(el);
+                });
+            }
+
+            function animateStatValue(el) {
+                var targetValue = parseFloat(el.getAttribute('data-count'));
+                var prefix = el.getAttribute('data-prefix') || '';
+                var suffix = el.getAttribute('data-suffix') || '';
+                var duration = 1500;
+                var startTime = null;
+                var isDecimal = targetValue % 1 !== 0;
+
+                function step(timestamp) {
+                    if (!startTime) {
+                        startTime = timestamp;
+                    }
+
+                    var elapsed = timestamp - startTime;
+                    var progress = Math.min(elapsed / duration, 1);
+
+                    // Ease out cubic
+                    var eased = 1 - Math.pow(1 - progress, 3);
+                    var currentValue = targetValue * eased;
+
+                    if (isDecimal) {
+                        el.textContent = prefix + currentValue.toFixed(1) + suffix;
+                    } else {
+                        el.textContent = prefix + Math.floor(currentValue) + suffix;
+                    }
+
+                    if (progress < 1) {
+                        requestAnimationFrame(step);
+                    } else {
+                        // Ensure final value is exact
+                        if (isDecimal) {
+                            el.textContent = prefix + targetValue.toFixed(1) + suffix;
+                        } else {
+                            el.textContent = prefix + targetValue + suffix;
+                        }
+                    }
+                }
+
+                requestAnimationFrame(step);
+            }
+
+            // ========================================================
+            //  EVENT LISTENERS
+            // ========================================================
+
+            // Scroll handler (throttled with rAF)
+            var ticking = false;
+            window.addEventListener('scroll', function () {
+                if (!ticking) {
+                    requestAnimationFrame(function () {
+                        handleScroll();
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+
+            // Mobile menu toggle
+            if (navToggle) {
+                navToggle.addEventListener('click', toggleMobileMenu);
+            }
+
+            // Close mobile menu when clicking nav links
+            var allNavLinks = navLinks.querySelectorAll('.nav__link');
+            allNavLinks.forEach(function (link) {
+                link.addEventListener('click', handleNavLinkClick);
+            });
+
+            // Back to top button
+            if (backToTop) {
+                backToTop.addEventListener('click', scrollToTop);
+            }
+
+            // Contact form submission
+            if (contactForm) {
+                contactForm.addEventListener('submit', handleFormSubmit);
+            }
+
+            // ========================================================
+            //  INITIALIZATION
+            // ========================================================
+
+            // Run scroll handler on load
+            handleScroll();
+
+            // Setup stat counter animation
+            setupStatAnimation();
+
+            // Log ready state
+            console.log(
+                '%c Rudy\'s Pools & Carpentry Shop %c Demo Ready ',
+                'background: #0052ff; color: white; padding: 4px 8px; border-radius: 4px 0 0 4px; font-weight: bold;',
+                'background: #0a0a23; color: white; padding: 4px 8px; border-radius: 0 4px 4px 0;'
+            );
+
+        })();
+    </script>
+
+</body>
+</html>
